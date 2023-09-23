@@ -16,8 +16,8 @@
 ## **[Class: Department (SALES, HR, FINANCE, SECURITY, ADMINISTRATION)](HR-management/src/main/java/org/example/Department.java)**
 ## **[Class: Generator](HR-management/src/main/java/org/example/Generator.java)**
 > ## Methods:
->> - empIdGen - (has to generate id format: "EMP%********".  * - some digits)
->> - empGen - (creates 40 employees. Use Faker(Фэйкер, не Факер))) dependency
+>> - [empIdGen](https://github.com/DmitriDjourov/HR-management/blob/2ba5828abf00682cf8a2e55d8cecd5bb28628bdb/HR-management/src/main/java/org/example/Generator.java#L11C11-L11C11) - (has to generate id format: "EMP%********".  * - some digits)
+>> - [empGen](https://github.com/DmitriDjourov/HR-management/blob/2ba5828abf00682cf8a2e55d8cecd5bb28628bdb/HR-management/src/main/java/org/example/Generator.java#L16C28-L16C28) - (creates 40 employees. Use Faker(Фэйкер, не Факер))) dependency
 >>  https://mvnrepository.com/artifact/com.github.javafaker/javafaker to generate what you want)
 
 ## **[Class: SetUP:](HR-management/src/main/java/org/example/SetUp.java)**
