@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69468bda-18c8-4c34-9c9f-d06cd87d8df6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="69468bda-18c8-4c34-9c9f-d06cd87d8df6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +32,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/TEL_RAN/Algorithms",
+    "last_opened_file_path": "C:/TEL_RAN/HR management/HR-management",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +56,7 @@
       <workItem from="1695475913932" duration="828000" />
       <workItem from="1695476982254" duration="570000" />
       <workItem from="1695477814673" duration="48000" />
+      <workItem from="1695477877459" duration="199000" />
     </task>
     <servers />
   </component>
