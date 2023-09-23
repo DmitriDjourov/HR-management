@@ -26,7 +26,7 @@
 
 ## **[Class: ServiceCollection](HR-management/src/main/java/org/example/ServiceCollection.java)**
 ## Methods:
->> - показать всех отсортировав по имени
+>> - [показать всех отсортировав по имени](https://github.com/DmitriDjourov/HR-management/blob/638e0f3e6d93d143c23e7d002f94add208043d35/HR-management/src/main/java/org/example/ServiceCollection.java#L10)
 >> - показать всех отсортировав по зарплате
 >> - показать имя, фамилию, департамент и грейд
 >> - показать среднюю зарплату по департаментам
