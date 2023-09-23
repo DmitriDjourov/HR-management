@@ -20,7 +20,7 @@
 >> - empGen - (creates 40 employees. Use Faker(Фэйкер, не Факер))) dependency
 >>  https://mvnrepository.com/artifact/com.github.javafaker/javafaker to generate what you want)
 
-## ** [Class: SetUP:](HR-management/src/main/java/org/example/SetUp.java)**
+## **[Class: SetUP:](HR-management/src/main/java/org/example/SetUp.java)**
 ## Method:
 >> - setUP - (fill List<Employee>)
 
