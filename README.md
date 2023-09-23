@@ -24,7 +24,7 @@
 ## Method:
 >> - setUP - (fill List<Employee>)
 
-## **[Class: ServiceCollection]()**
+## **[Class: ServiceCollection](HR-management/src/main/java/org/example/ServiceCollection.java)**
 ## Methods:
 >> - показать всех отсортировав по имени
 >> - показать всех отсортировав по зарплате
