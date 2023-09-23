@@ -10,8 +10,9 @@ public class ServiceCollection {
 		public void sortAllEmployeesName(List<Employee> employees) {
 				Collections.sort(employees);
 		}
+
 		// - показать всех отсортировав по зарплате
-		public void sortAllEmployeesSalary(List<Employee> employees){
+		public void sortAllEmployeesSalary(List<Employee> employees) {
 				employees.sort(Comparator.comparingDouble(Employee::getSalary));
 		}
 }
