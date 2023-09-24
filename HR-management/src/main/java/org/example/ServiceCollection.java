@@ -61,5 +61,36 @@ public class ServiceCollection {
 				}
 				return treeFildsInfoList;
 		}
+
+		// - повысить % бонуса у всех сотрудников того департамента, в котором больше всего сотрудников hasPlanBeenCompleted = тру,
+		//   если таких несколько то повысить у всех.
+		public static List<Department> getEmpPlanTrueBonusUp(List<Employee> employees, double bonusUp) {
+				// Логика увеличения бонусов и поиска департамента(ов) с наибольшим количеством выполненных планов
+				Map<Department, Integer> depEmpCount = new HashMap<>();
+				List<Department> maxDep = new ArrayList<>();
+				int maxCount = Integer.MIN_VALUE;
+
+				for (Employee employee : employees) {
+						if (employee.isHasPlanBeenCompleted()) {
+								Department department = employee.getDepartment();
+								depEmpCount.put(department, depEmpCount.getOrDefault(department, 0) + 1);
+								int count = depEmpCount.get(department);
+
+								if (count > maxCount) {
+										maxCount = count;
+										maxDep.clear();
+										maxDep.add(department);
+								} else if (count == maxCount && !maxDep.contains(department)) {
+										maxDep.add(department);
+								}
+
+								double BonusPct = employee.getBonusPCT();
+								double newBonusPct = BonusPct + (BonusPct * bonusUp / 100);
+								employee.setBonusPCT(newBonusPct);
+						}
+				}
+				return maxDep;
+		}
 }
+
 

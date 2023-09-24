@@ -58,13 +58,45 @@ public class Main {
 				}
 
 // - показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру
-				System.out.println("показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру");
+				System.out.println(" - показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру");
 				List<String> employee3Fields = ServiceCollection.getNameSurnameGradePlanComp(employees);
 
 				for (String employee3F : employee3Fields) {
 						System.out.println(employee3F);
 				}
 				System.out.println();
+
+// - повысить % бонуса у всех сотрудников того департамента, в котором больше всего сотрудников hasPlanBeenCompleted = тру,
+//	 если таких несколько то повысить у всех.
+				System.out.println(" - повысить % бонуса у всех сотрудников того департамента, в котором больше всего " +
+						                   "сотрудников hasPlanBeenCompleted = тру, если таких несколько то повысить у всех.");
+
+				System.out.println("Информация о сотрудниках до изменения бонуса:");
+				for (Employee employee : employees) {
+						System.out.println("Имя: " + employee.getName() +
+								                   ", Фамилия: " + employee.getSurname() +
+								                   ", Департамент: " + employee.getDepartment() +
+								                   ", Грейд: " + employee.getGrade() +
+								                   ", % бонуса: " + employee.getBonusPCT() + "%");
+				}
+				double bonusUp = 10.0; // поднять на 10%
+				List<Department> maxDepartments = ServiceCollection.getEmpPlanTrueBonusUp(employees, bonusUp);
+
+				// Вывод информации о сотрудниках после изменения бонусов
+				System.out.println("\nИнформация о сотрудниках после изменения бонуса:");
+				for (Employee employee : employees) {
+						System.out.println("Имя: " + employee.getName() +
+								                   ", Фамилия: " + employee.getSurname() +
+								                   ", Департамент: " + employee.getDepartment() +
+								                   ", Грейд: " + employee.getGrade() +
+								                   ", % бонуса: " + employee.getBonusPCT() + "%");
+				}
+
+				// Вывод департаментов с наибольшим количеством выполненных планов
+				System.out.println("\nДепартамент с наибольшим количеством выполненных планов:");
+				for (Department department : maxDepartments) {
+						System.out.println(department);
+				}
 		}
 }
 
