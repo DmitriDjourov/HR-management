@@ -128,11 +128,11 @@ public class ServiceCollection {
 						if (employee.getDepartment() == Department.SALES && employee.isHasPlanBeenCompleted()) {
 								if (employee.getGrade() == Grade.A) {
 										double oldSalary = employee.getSalary();
-										double newSalary = oldSalary * 1.1; // Увеличиваем на 50%
+										double newSalary = oldSalary * 1.1; // Увеличиваем на 10%
 										employee.setSalary(newSalary);
 
 										double oldBonusPct = employee.getBonusPCT();
-										double newBonusPct = oldBonusPct * 1.1; // Увеличиваем на 50%
+										double newBonusPct = oldBonusPct * 1.1; // Увеличиваем на 10%
 										employee.setBonusPCT(newBonusPct);
 								} else {
 
@@ -141,7 +141,7 @@ public class ServiceCollection {
 										employee.setGrade(newGrade);
 
 										double oldSalary = employee.getSalary();
-										double newSalary = oldSalary * 1.1; // Увеличиваем на 50%
+										double newSalary = oldSalary * 1.1; // Увеличиваем на 10%
 										employee.setSalary(newSalary);
 								}
 						}
