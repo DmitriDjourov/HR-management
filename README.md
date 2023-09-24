@@ -26,9 +26,9 @@
 
 ## **[Class: ServiceCollection](HR-management/src/main/java/org/example/ServiceCollection.java)**
 ## Methods:
->> - [показать всех отсортировав по имени](https://github.com/DmitriDjourov/HR-management/blob/f7923cf8576a5d76a39005bdd5d50e5f4c3ee08b/HR-management/src/main/java/org/example/ServiceCollection.java#L10)
->> - [показать всех отсортировав по зарплате](https://github.com/DmitriDjourov/HR-management/blob/638e0f3e6d93d143c23e7d002f94add208043d35/HR-management/src/main/java/org/example/ServiceCollection.java#L15)
->> - показать имя, фамилию, департамент и грейд
+>> - [показать всех отсортировав по имени](https://github.com/DmitriDjourov/HR-management/blob/048844f405469f49b6565f98adde5c6c1f354a25/HR-management/src/main/java/org/example/ServiceCollection.java#L11)
+>> - [показать всех отсортировав по зарплате](https://github.com/DmitriDjourov/HR-management/blob/048844f405469f49b6565f98adde5c6c1f354a25/HR-management/src/main/java/org/example/ServiceCollection.java#L16)
+>> - [показать имя, фамилию, департамент и грейд](https://github.com/DmitriDjourov/HR-management/blob/048844f405469f49b6565f98adde5c6c1f354a25/HR-management/src/main/java/org/example/ServiceCollection.java#L21)
 >> - показать среднюю зарплату по департаментам
 >> - показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру
 >> - повысить % бонуса у всех сотрудников того департамента, в котором больше всего сотрудников hasPlanBeenCompleted = тру,
