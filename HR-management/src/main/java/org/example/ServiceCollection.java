@@ -91,6 +91,7 @@ public class ServiceCollection {
 				}
 				return maxDep;
 		}
+
 		public static List<Department> getEmpPlanFalseBonusDown(List<Employee> employees, double bonusDown) {
 
 				Map<Department, Integer> depEmpCount = new HashMap<>();
@@ -117,6 +118,45 @@ public class ServiceCollection {
 						}
 				}
 				return minDepartments;
+		}
+
+		//	 - у департамента продаж взять всех кто выполнили план и если у сотруднка который выполнил план грейд А то повысить зп и бонус,
+		//		 если грейд ниже то повысить на 1 ступень и только зп.
+//
+		public static List<Employee> getUpSalaryAndBonusForSales(List<Employee> employees) {
+				for (Employee employee : employees) {
+						if (employee.getDepartment() == Department.SALES && employee.isHasPlanBeenCompleted()) {
+								if (employee.getGrade() == Grade.A) {
+										double oldSalary = employee.getSalary();
+										double newSalary = oldSalary * 1.1; // Увеличиваем на 50%
+										employee.setSalary(newSalary);
+
+										double oldBonusPct = employee.getBonusPCT();
+										double newBonusPct = oldBonusPct * 1.1; // Увеличиваем на 50%
+										employee.setBonusPCT(newBonusPct);
+								} else {
+
+										Grade oldGrade = employee.getGrade();
+										Grade newGrade = getNextGrade(oldGrade);// Увеличиваем грейд на 1 ступень
+										employee.setGrade(newGrade);
+
+										double oldSalary = employee.getSalary();
+										double newSalary = oldSalary * 1.1; // Увеличиваем на 50%
+										employee.setSalary(newSalary);
+								}
+						}
+				}
+
+				return employees;
+		}
+		private static Grade getNextGrade(Grade carrentGrade) {
+				switch (carrentGrade) {
+						case A: return Grade.A;
+						case B: return Grade.A;
+						case C: return Grade.B;
+						case D: return Grade.C;
+						default: return carrentGrade;
+				}
 		}
 }
 
