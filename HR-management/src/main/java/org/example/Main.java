@@ -20,7 +20,7 @@ public class Main {
 
 // - показать всех отсортировав по имени
 				System.out.println(" - показать всех отсортировав по имени");
-				serviceCollection.sortAllEmployeesName(employees);
+				serviceCollection.getSortAllEmployeesName(employees);
 
 				for (Employee employee : employees) {
 						System.out.println(employee.toString());
@@ -29,10 +29,19 @@ public class Main {
 
 // - показать всех отсортировав по зарплате
 				System.out.println(" - показать всех отсортировав по зарплате");
-				serviceCollection.sortAllEmployeesSalary(employees);
+				serviceCollection.getSortAllEmployeesSalary(employees);
 
 				for (Employee employee : employees) {
 						System.out.println(employee.toString());
+				}
+				System.out.println();
+
+// - показать имя, фамилию, департамент и грейд
+				System.out.println(" - показать имя, фамилию, департамент и грейд");
+				List<String> employee4Fields = serviceCollection.getDisplNameSurnameDeptGrade(employees);
+
+				for (String employee4F : employee4Fields) {
+						System.out.println(employee4F);
 				}
 				System.out.println();
 		}

@@ -27,8 +27,9 @@ public class Generator {
 						double salary = faker.number().randomDouble(2, 2000, 5000);
 						double bonusPCT = faker.number().randomDouble(2, 0, 1); // процент бонуса (0-100%)
 						boolean hasPlanBeenCompleted = faker.random().nextBoolean();
+						Department department = Department.values()[faker.random().nextInt(Department.values().length)];
 
-						Employee employee = new Employee(empId, name, surname, grade, salary, bonusPCT, hasPlanBeenCompleted);
+						Employee employee = new Employee(empId, name, surname, grade, salary, bonusPCT, hasPlanBeenCompleted, department);
 						employees.add(employee);
 				}
 				return employees;

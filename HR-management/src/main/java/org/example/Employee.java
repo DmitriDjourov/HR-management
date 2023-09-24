@@ -14,11 +14,12 @@ public class Employee implements Comparable<Employee> {
 		private double salary;
 		private double bonusPCT;
 		private boolean hasPlanBeenCompleted;
+		private Department department;
 
 		public Employee() {
 		}
 
-		public Employee(String id, String name, String surname, Grade grade, double salary, double bonusPCT, boolean hasPlanBeenCompleted) {
+		public Employee(String id, String name, String surname, Grade grade, double salary, double bonusPCT, boolean hasPlanBeenCompleted, Department department) {
 				this.id = id;
 				this.name = name;
 				this.surname = surname;
@@ -26,6 +27,7 @@ public class Employee implements Comparable<Employee> {
 				this.salary = salary;
 				this.bonusPCT = bonusPCT;
 				this.hasPlanBeenCompleted = hasPlanBeenCompleted;
+				this.department = department;
 		}
 
 		public String getId() {
@@ -81,20 +83,28 @@ public class Employee implements Comparable<Employee> {
 		}
 
 		public void setHasPlanBeenCompleted(boolean hasPlanBeenCompleted) {
-				this.hasPlanBeenCompleted = hasPlanBeenCompleted;
+				this.hasPlanBeenCompleted = hasPlanBeenCompleted;	}
+
+		public Department getDepartment() {
+				return department;
+		}
+
+		public void setDepartment(Department department) {
+				this.department = department;
 		}
 
 		@Override
 		public String toString() {
 				return "Employee{" +
-									 "id=" + id +
-									 ", name='" + name + '\'' +
-									 ", surname='" + surname + '\'' +
-									 ", grade=" + grade +
-									 ", salary=" + salary +
-									 ", bonusPCT=" + bonusPCT +
-									 ", hasPlanBeenCompleted=" + hasPlanBeenCompleted +
-									 '}';
+						       "id='" + id + '\'' +
+						       ", name='" + name + '\'' +
+						       ", surname='" + surname + '\'' +
+						       ", grade=" + grade +
+						       ", salary=" + salary +
+						       ", bonusPCT=" + bonusPCT +
+						       ", hasPlanBeenCompleted=" + hasPlanBeenCompleted +
+						       ", department='" + department + '\'' +
+						       '}';
 		}
 
 		@Override
