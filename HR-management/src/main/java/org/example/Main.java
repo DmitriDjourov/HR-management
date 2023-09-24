@@ -50,12 +50,21 @@ public class Main {
 
 // - показать среднюю зарплату по департаментам
 				System.out.println(" - показать среднюю зарплату по департаментам");
-				Map<Department, Double> depAvgSal= serviceCollection.getAvgSalDep(employees);
+				Map<Department, Double> depAvgSal = serviceCollection.getAvgSalDep(employees);
 
 				for (Department department : depAvgSal.keySet()) {
 						double avgSal = depAvgSal.get(department);
 						System.out.printf("Департамент: %s, Средняя зарплата: %.2f%n", department, avgSal);
 				}
+
+// - показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру
+				System.out.println("показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру");
+				List<String> employee3Fields = ServiceCollection.getNameSurnameGradePlanComp(employees);
+
+				for (String employee3F : employee3Fields) {
+						System.out.println(employee3F);
+				}
+				System.out.println();
 		}
 }
 

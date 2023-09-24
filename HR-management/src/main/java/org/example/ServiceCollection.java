@@ -48,5 +48,18 @@ public class ServiceCollection {
 
 				return depAvgSal;
 		}
+
+		// - показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру
+		public static List<String> getNameSurnameGradePlanComp(List<Employee> employees) {
+				List<String> treeFildsInfoList = new ArrayList<>();
+
+				for (Employee employee : employees) {
+						if (employee.isHasPlanBeenCompleted()) {
+								String treeFieldsInfo = "  " + employee.getName() + "  " + employee.getSurname() + "  " + employee.getGrade();
+								treeFildsInfoList.add(treeFieldsInfo);
+						}
+				}
+				return treeFildsInfoList;
+		}
 }
 
