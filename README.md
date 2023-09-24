@@ -33,7 +33,7 @@
 >> - [показать имя, фамилию и грейд только у тех кто выполнил план. hasPlanBeenCompleted = тру](https://github.com/DmitriDjourov/HR-management/blob/7edec8baa7272991218b1b6a530bd0be2ee93b32/HR-management/src/main/java/org/example/ServiceCollection.java#L53)
 >> - [повысить % бонуса у всех сотрудников того департамента, в котором больше всего сотрудников hasPlanBeenCompleted = тру,
 >> если таких несколько то повысить у всех](https://github.com/DmitriDjourov/HR-management/blob/7edec8baa7272991218b1b6a530bd0be2ee93b32/HR-management/src/main/java/org/example/ServiceCollection.java#L67).
->> - [понизить % бонуса у департамента у которого меньше всего сотрудников выполнило план, если таких несколько то у всех](https://github.com/DmitriDjourov/HR-management/blob/7edec8baa7272991218b1b6a530bd0be2ee93b32/HR-management/src/main/java/org/example/ServiceCollection.java#L95C3-L95C3)
+>> - [понизить % бонуса у департамента у которого меньше всего сотрудников выполнило план, если таких несколько то у всех](https://github.com/DmitriDjourov/HR-management/blob/a227ea1b715a07a5b81d82747949faa31bb0873e/HR-management/src/main/java/org/example/ServiceCollection.java#L94)
 >> - [у департамента продаж взять всех кто выполнили план и если у сотруднка который выполнил план грейд А то повысить зп и бонус,
 >> если грейд ниже то повысить на 1 ступень и только зп.](https://github.com/DmitriDjourov/HR-management/blob/7edec8baa7272991218b1b6a530bd0be2ee93b32/HR-management/src/main/java/org/example/ServiceCollection.java#L126)
 
