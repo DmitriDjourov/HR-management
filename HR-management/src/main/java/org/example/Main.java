@@ -2,6 +2,9 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import static org.example.ServiceCollection.getAvgSalDep;
 
 public class Main {
 		public static void main(String[] args) {
@@ -20,7 +23,7 @@ public class Main {
 
 // - показать всех отсортировав по имени
 				System.out.println(" - показать всех отсортировав по имени");
-				serviceCollection.getSortAllEmployeesName(employees);
+				ServiceCollection.getSortAllEmployeesName(employees);
 
 				for (Employee employee : employees) {
 						System.out.println(employee.toString());
@@ -29,7 +32,7 @@ public class Main {
 
 // - показать всех отсортировав по зарплате
 				System.out.println(" - показать всех отсортировав по зарплате");
-				serviceCollection.getSortAllEmployeesSalary(employees);
+				ServiceCollection.getSortAllEmployeesSalary(employees);
 
 				for (Employee employee : employees) {
 						System.out.println(employee.toString());
@@ -38,12 +41,21 @@ public class Main {
 
 // - показать имя, фамилию, департамент и грейд
 				System.out.println(" - показать имя, фамилию, департамент и грейд");
-				List<String> employee4Fields = serviceCollection.getDisplNameSurnameDeptGrade(employees);
+				List<String> employee4Fields = ServiceCollection.getDisplNameSurnameDeptGrade(employees);
 
 				for (String employee4F : employee4Fields) {
 						System.out.println(employee4F);
 				}
 				System.out.println();
+
+// - показать среднюю зарплату по департаментам
+				System.out.println(" - показать среднюю зарплату по департаментам");
+				Map<Department, Double> depAvgSal= serviceCollection.getAvgSalDep(employees);
+
+				for (Department department : depAvgSal.keySet()) {
+						double avgSal = depAvgSal.get(department);
+						System.out.printf("Департамент: %s, Средняя зарплата: %.2f%n", department, avgSal);
+				}
 		}
 }
 
