@@ -71,7 +71,7 @@ public class Main {
 				System.out.println(" - повысить % бонуса у всех сотрудников того департамента, в котором больше всего " +
 						                   "сотрудников hasPlanBeenCompleted = тру, если таких несколько то повысить у всех.");
 
-				System.out.println("Информация о сотрудниках до изменения бонуса:");
+				System.out.println("Информация о сотрудниках до повышения бонуса: ");
 				for (Employee employee : employees) {
 						System.out.println("Имя: " + employee.getName() +
 								                   ", Фамилия: " + employee.getSurname() +
@@ -82,8 +82,12 @@ public class Main {
 				double bonusUp = 10.0; // поднять на 10%
 				List<Department> maxDepartments = ServiceCollection.getEmpPlanTrueBonusUp(employees, bonusUp);
 
-				// Вывод информации о сотрудниках после изменения бонусов
-				System.out.println("\nИнформация о сотрудниках после изменения бонуса:");
+				System.out.println(" Департаменты для которых повышаем бонус : ");
+				for (Department department : maxDepartments) {
+						System.out.println(department);
+				}
+
+				System.out.println(" Информация о сотрудниках после повышения бонуса: ");
 				for (Employee employee : employees) {
 						System.out.println("Имя: " + employee.getName() +
 								                   ", Фамилия: " + employee.getSurname() +
@@ -92,11 +96,32 @@ public class Main {
 								                   ", % бонуса: " + employee.getBonusPCT() + "%");
 				}
 
-				// Вывод департаментов с наибольшим количеством выполненных планов
-				System.out.println("\nДепартамент с наибольшим количеством выполненных планов:");
-				for (Department department : maxDepartments) {
+// - понизить % бонуса у департамента у которого меньше всего сотрудников выполнило план, если таких несколько то у всех
+				System.out.println(" - понизить % бонуса у департамента у которого меньше всего сотрудников выполнило план, " +
+						                   "если таких несколько то у всех");
+
+				System.out.println(" Информация о сотрудниках до понижения бонуса: ");
+				for (Employee employee : employees) {
+						System.out.println("Имя: " + employee.getName() +
+								                   ", Фамилия: " + employee.getSurname() +
+								                   ", Департамент: " + employee.getDepartment() +
+								                   ", Грейд: " + employee.getGrade() +
+								                   ", % бонуса: " + employee.getBonusPCT() + "%");
+				}
+				double bonusDown = 10.0; // Понизить на 10%
+				List<Department> minDepartmentsDown = ServiceCollection.getEmpPlanFalseBonusDown(employees, bonusDown);
+
+				System.out.println(" Департаменты для которых понижаем бонус: ");
+				for (Department department : minDepartmentsDown) {
 						System.out.println(department);
+				}
+				System.out.println(" Информация о сотрудниках после понижения бонуса: ");
+				for (Employee employee : employees) {
+						System.out.println("Имя: " + employee.getName() +
+								                   ", Фамилия: " + employee.getSurname() +
+								                   ", Департамент: " + employee.getDepartment() +
+								                   ", Грейд: " + employee.getGrade() +
+								                   ", % бонуса: " + employee.getBonusPCT() + "%");
 				}
 		}
 }
-

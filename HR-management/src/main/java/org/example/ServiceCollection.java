@@ -91,6 +91,34 @@ public class ServiceCollection {
 				}
 				return maxDep;
 		}
+		public static List<Department> getEmpPlanFalseBonusDown(List<Employee> employees, double bonusDown) {
+
+				Map<Department, Integer> depEmpCount = new HashMap<>();
+				List<Department> minDepartments = new ArrayList<>();
+				int minCount = Integer.MAX_VALUE;
+
+				for (Employee employee : employees) {
+						if (!employee.isHasPlanBeenCompleted()) {
+								Department department = employee.getDepartment();
+								depEmpCount.put(department, depEmpCount.getOrDefault(department, 0) + 1);
+								int count = depEmpCount.get(department);
+
+								if (count < minCount) {
+										minCount = count;
+										minDepartments.clear();
+										minDepartments.add(department);
+								} else if (count == minCount && !minDepartments.contains(department)) {
+										minDepartments.add(department);
+								}
+
+								double BonusPct = employee.getBonusPCT();
+								double newBonusPct = BonusPct - (BonusPct * bonusDown / 100);
+								employee.setBonusPCT(newBonusPct);
+						}
+				}
+				return minDepartments;
+		}
 }
+
 
 
