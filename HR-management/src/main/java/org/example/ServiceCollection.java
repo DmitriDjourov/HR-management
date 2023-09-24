@@ -91,7 +91,7 @@ public class ServiceCollection {
 				}
 				return maxDep;
 		}
-
+		// - понизить % бонуса у департамента у которого меньше всего сотрудников выполнило план, если таких несколько то у всехg
 		public static List<Department> getEmpPlanFalseBonusDown(List<Employee> employees, double bonusDown) {
 
 				Map<Department, Integer> depEmpCount = new HashMap<>();
